@@ -29,5 +29,6 @@ module.exports = function (defaults) {
     packagerOptions: {
       webpackConfig: {},
     },
+    splitAtRoutes: ["teams", "players", "table"],
   });
 };
