@@ -1,5 +1,11 @@
 <h2>Teams:</h2>
 
+{{#if (is-array (array 1 2 3))}}
+  <div class="p-4 m-4 bg-green-600 text-white">
+    [1, 2, 3] is an array
+  </div>
+{{/if}}
+
 <Team @name="Alexs' Team" />
 <Team @name="Ben's Team" />
 <Team @name="Sophie's Team" />
