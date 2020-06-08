@@ -1,5 +1,6 @@
 <h2>Teams:</h2>
 
+<<<<<<< HEAD
 {{#if (is-array (array 1 2 3))}}
   <div class="p-4 m-4 bg-green-600 text-white">
     [1, 2, 3] is an array
@@ -9,5 +10,10 @@
 <Team @name="Alexs' Team" />
 <Team @name="Ben's Team" />
 <Team @name="Sophie's Team" />
+=======
+{{#each (range 1 5) as |number|}}
+  <Team @name=(concat "Team #" number) />
+{{/each}}
+>>>>>>> b90ab23... try ember-composable-helpers
 
 {{outlet}}
