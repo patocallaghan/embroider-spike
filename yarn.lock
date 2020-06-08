@@ -1182,6 +1182,14 @@
     resolve "^1.8.1"
     semver "^5.6.0"
 
+"@embroider/router@^0.19.0":
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/@embroider/router/-/router-0.19.0.tgz#508f219128be5ca2238b482d94ba2211f15d0fb9"
+  integrity sha512-idm0dpM8r8RQym/78M4j/Ww2iY4sVmiJ8r1djYZToSGATzvFxbdYzh5tTbKDlCaXuCDPOp7Fxu2woT33saFfEQ==
+  dependencies:
+    "@embroider/macros" "0.19.0"
+    ember-cli-babel "^7.20.5"
+
 "@embroider/webpack@^0.19.0":
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/@embroider/webpack/-/webpack-0.19.0.tgz#39d2c9eac2370bba30dce0a10762d0de923e64dd"
@@ -4881,7 +4889,7 @@ ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.12.0, ember-cli-babel@^6.16.0,
     ember-cli-version-checker "^2.1.2"
     semver "^5.5.0"
 
-ember-cli-babel@^7.11.0, ember-cli-babel@^7.12.0, ember-cli-babel@^7.13.2, ember-cli-babel@^7.18.0, ember-cli-babel@^7.19.0, ember-cli-babel@^7.7.3:
+ember-cli-babel@^7.11.0, ember-cli-babel@^7.12.0, ember-cli-babel@^7.13.2, ember-cli-babel@^7.18.0, ember-cli-babel@^7.19.0, ember-cli-babel@^7.20.5, ember-cli-babel@^7.7.3:
   version "7.20.5"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-7.20.5.tgz#ab60dcf7371f4d86d41c2596c6d050470e283074"
   integrity sha512-lWvKqJPQ1KJigWKmxREqFbXgZd2/nFKMg3chiiNejpsAIgGLPXGFLwpMQ7QYCRrlims7D/bnDgFvXuOLkw0fcQ==
