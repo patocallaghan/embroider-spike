@@ -1,6 +1,6 @@
 # embroider-spike
 
-This is a simple demo app which uses [Embroider](https://github.com/embroider-build/embroider), the inprogress new build system for Ember apps. I'll document any [issues that I find](https://github.com/GavinJoyce/embroider-spike/issues). My aim here is to learn more about Embroider and to begin to figure out how and when we should begin adopting it in [Intercom](https://www.intercom.com/).
+This is a simple demo app which uses [Embroider](https://github.com/embroider-build/embroider), the in progress new build system for Ember apps. I'll document any [issues that I find](https://github.com/GavinJoyce/embroider-spike/issues). My aim here is to learn more about Embroider and to begin to figure out how and when we should begin adopting it in [Intercom](https://www.intercom.com/).
 
 Here's a [list of things that I'm hoping to try](https://github.com/GavinJoyce/embroider-spike/projects).
 
