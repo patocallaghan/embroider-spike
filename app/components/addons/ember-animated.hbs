@@ -1,0 +1,10 @@
+<Addons::Addon @name="ember-animated" class="bg-purple-300">
+  <div class="svg-move">
+    <Button {{on "click" this.move}}>Move</Button>
+  </div>
+  <svg width="600" height="600" >
+    {{#animated-each this.bubbles key="id" watch="x,y,r" use=this.moveThem duration=1000 as |bubble|}}
+      <circle id="bubble-{{bubble.id}}" cx="{{bubble.x}}%" cy="{{bubble.y}}%" r={{bubble.radius}} fill="white" stroke="black" />
+    {{/animated-each}}
+  </svg>
+</Addons::Addon>
