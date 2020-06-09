@@ -10,4 +10,9 @@ Router.map(function () {
   this.route("players");
   this.route("teams");
   this.route("table");
+  this.route('parent', function() {
+    this.route('child', function() {
+      this.route('grandchild');
+    });
+  });
 });

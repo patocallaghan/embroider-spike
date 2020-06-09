@@ -39,6 +39,13 @@ module.exports = function (defaults) {
         ],
       },
     },
-    splitAtRoutes: ["teams", "players", "table"],
+    splitAtRoutes: [
+      "teams",
+      "players",
+      "table",
+      "parent",
+      "parent.child",
+      "parent.child.grandchild",
+    ],
   });
 };
