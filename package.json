@@ -51,6 +51,7 @@
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-moment": "^8.0.0",
     "ember-qunit": "^4.6.0",
+    "ember-ref-modifier": "^1.0.0",
     "ember-resolver": "^8.0.0",
     "ember-simple-set-helper": "^0.1.2",
     "ember-source": "https://s3.amazonaws.com/builds.emberjs.com/canary/shas/9c1b4e8ad6226b559605d34be22338af9ffc31aa.tgz",
