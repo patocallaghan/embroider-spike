@@ -1,9 +1,9 @@
 <Addons::Addon @name="ember-concurrency" class="bg-green-300">
   <pre>The count is {{this.count}}</pre>
 
-  <button
+  <Button
     {{on "click" (perform this.doSomething)}}
-    class="p-2 {{if this.doSomething.isRunning 'bg-green-500' 'bg-green-800'}} text-white border"
+    class="{{if this.doSomething.isRunning 'bg-green-500' 'bg-green-800'}} text-white"
     disabled={{this.doSomething.isRunning}}
   >
     {{#if this.doSomething.isRunning}}
@@ -11,5 +11,5 @@
     {{else}}
       Click me
     {{/if}}
-  </button>
+  </Button>
 </Addons::Addon>

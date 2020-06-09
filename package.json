@@ -48,6 +48,7 @@
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-qunit": "^4.6.0",
     "ember-resolver": "^8.0.0",
+    "ember-simple-set-helper": "^0.1.2",
     "ember-source": "https://s3.amazonaws.com/builds.emberjs.com/canary/shas/9c1b4e8ad6226b559605d34be22338af9ffc31aa.tgz",
     "ember-template-lint": "^2.6.0",
     "ember-truth-helpers": "^2.1.0",
