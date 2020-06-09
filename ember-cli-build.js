@@ -40,6 +40,7 @@ module.exports = function (defaults) {
       },
     },
     splitAtRoutes: [
+      "addons",
       "teams",
       "players",
       "table",

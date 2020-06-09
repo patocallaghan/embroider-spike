@@ -15,4 +15,5 @@ Router.map(function () {
       this.route('grandchild');
     });
   });
+  this.route('addons');
 });
