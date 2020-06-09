@@ -1,20 +1,15 @@
-<div class="p-4 m-4 bg-green-300">
-  <h3 class="text-2xl p-2">ember-concurrency</h3>
-  <hr class="border mb-6">
+<Addons::Addon @name="ember-concurrency" class="bg-green-300">
+  <pre>The count is {{this.count}}</pre>
 
-  <div class="p-4 bg-white border">
-    <pre>The count is {{this.count}}</pre>
-    
-    <button
-      {{on "click" (perform this.doSomething)}}
-      class="p-2 {{if this.doSomething.isRunning 'bg-green-500' 'bg-green-800'}} text-white border"
-      disabled={{this.doSomething.isRunning}}
-    >
-      {{#if this.doSomething.isRunning}}
-        running...
-      {{else}}
-        Click me
-      {{/if}}
-    </button>
-  </div>
-</div>
+  <button
+    {{on "click" (perform this.doSomething)}}
+    class="p-2 {{if this.doSomething.isRunning 'bg-green-500' 'bg-green-800'}} text-white border"
+    disabled={{this.doSomething.isRunning}}
+  >
+    {{#if this.doSomething.isRunning}}
+      running...
+    {{else}}
+      Click me
+    {{/if}}
+  </button>
+</Addons::Addon>
