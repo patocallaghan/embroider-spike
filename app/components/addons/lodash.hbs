@@ -1,0 +1,13 @@
+<Addons::Addon @name="lodash" class="bg-pink-300">
+  Chunked numbers
+
+  <ul>
+    {{#each this.chunkedNumbers as |chunk|}}
+      <li>
+        {{#each chunk as |number|}}
+          [{{number}}]
+        {{/each}}
+      </li>
+    {{/each}}
+  </ul>
+</Addons::Addon>
