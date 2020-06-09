@@ -3,6 +3,6 @@
 import { helper } from "@ember/component/helper";
 
 export default helper(function unusedHelper(params /*, hash*/) {
-  console.log("TREESHAKE: This should not be present in build.");
+  console.log("TREESHAKE [unusedHelper]: This should not be present in build.");
   return params;
 });
