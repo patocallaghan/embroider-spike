@@ -1,0 +1,19 @@
+<Addons::Addon @name="ember-simple-set-helper" class="bg-red-300">
+  {{#if this.isExpanded}}
+    <Button {{on "click" (set this.isExpanded false)}}>close</Button>
+
+    <div class="h-64">
+      This is expanded<br>
+      This is expanded<br>
+      This is expanded<br>
+      This is expanded<br>
+      This is expanded<br>
+    </div>
+  {{else}}
+    <Button {{on "click" (set this.isExpanded true)}}>open</Button>
+
+    <div>
+      This is collapsed
+    </div>
+  {{/if}}
+</Addons::Addon>

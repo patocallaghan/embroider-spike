@@ -1,5 +1,8 @@
 <Addons::Addon @name="ember-href-to" class="bg-orange-300">
-  <a href={{href-to 'index'}} class="underline text-blue-800">
+  [<a href={{href-to 'index'}} class="underline text-blue-800">
     Click me to go home...
-  </a>
+  </a>]
+  [<a href={{href-to 'parent.child.grandchild'}} class="underline text-blue-800">
+    Click me to go parent/child/grandchild...
+  </a>]
 </Addons::Addon>
