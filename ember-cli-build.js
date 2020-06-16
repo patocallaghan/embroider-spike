@@ -39,6 +39,17 @@ module.exports = function (defaults) {
         ],
       },
     },
+    packageRules: [
+      {
+        package: 'ember-intl',
+        semverRange: '^4.0.1',
+        addonModules: {
+          'services/intl.js': {
+            dependsOnModules: ['../adapters/default.js']
+          }
+        }
+      },
+    ],
     splitAtRoutes: [
       "addons",
       "teams",

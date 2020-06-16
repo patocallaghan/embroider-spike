@@ -1,0 +1,2 @@
+price_banner: The {product} costs {price, number, USD}
+player.label: "This is the player component:"
