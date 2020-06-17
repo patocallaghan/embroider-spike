@@ -27,7 +27,7 @@ module.exports = function (defaults) {
     staticAddonTestSupportTrees: true,
     staticAddonTrees: true,
     staticHelpers: true,
-    staticComponents: true,
+    staticComponents: false,
     packagerOptions: {
       webpackConfig: {
         plugins: [
