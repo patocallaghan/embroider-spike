@@ -5829,6 +5829,15 @@ ember-truth-helpers@^2.1.0:
   dependencies:
     ember-cli-babel "^6.6.0"
 
+ember-window-mock@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/ember-window-mock/-/ember-window-mock-0.6.0.tgz#3195b0c5704df8b5ef2ffcfd69f6255058db3080"
+  integrity sha512-c6hZhM7HnOMpPIxUlGkvQ5DHL4lVwfbRv7auPVZ6iv1fGphYBor8/s3PdH7IDkG/wcElz7KCkZ33EdpaQbwbDw==
+  dependencies:
+    broccoli-funnel "^2.0.1"
+    ember-cli-babel "^7.13.0"
+    ember-cli-htmlbars "^4.2.0"
+
 emoji-regex@^7.0.1:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"
