@@ -32,8 +32,9 @@ module.exports = function (defaults) {
       webpackConfig: {
         plugins: [
           new BundleAnalyzerPlugin({
+            analyzerPort: 4452,
             generateStatsFile: true,
-            openAnalyzer: true,
+            openAnalyzer: false,
             statsFilename: path.join(process.cwd(), "bundle-stats.json"),
           }),
         ],
