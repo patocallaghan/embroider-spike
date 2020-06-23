@@ -1,0 +1,21 @@
+<Addons::Addon @name="ember-cli-flash" class="bg-blue-200">
+
+  <Button {{on "click" this.showFlashMessage}}
+    class="bg-green-800 text-white">
+    Click me
+  </Button>
+
+  {{#if this.flashMessages.queue}}
+    <div class="w-full relative " ...attributes>
+      <div class="flex fixed flex-column items-end right-0 bottom-0 mb-20 w-full height-auto z-50">
+        {{#each this.flashMessages.queue as |flash|}}
+          <div
+            class="bg-white p-4 ml-12 rounded shadow-lg">
+            {{flash.message}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+
+</Addons::Addon>
