@@ -20,6 +20,10 @@
       href="{{rootURL}}assets/embroider-spike.css"
     />
 
+    <script>
+      window.USE_CUSTOM_ROUTE_MAP = window.location.search.includes("custom=true");
+    </script>
+
     {{content-for "head-footer"}}
   </head>
   <body>

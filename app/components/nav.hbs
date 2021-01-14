@@ -1,0 +1,12 @@
+<nav class="p-4 m-4 bg-gray-200">
+  <LinkTo @route="index" @activeClass="text-green-700">[Home]</LinkTo>
+  {{#if this.useCustomRouteMap}}
+    <LinkTo @route="custom" @activeClass="text-green-700">[Custom]</LinkTo>
+  {{else}}
+    <LinkTo @route="players" @activeClass="text-green-700">[Players]</LinkTo>
+    <LinkTo @route="teams" @activeClass="text-green-700">[Teams]</LinkTo>
+    <LinkTo @route="table" @activeClass="text-green-700">[Table]</LinkTo>
+    <LinkTo @route="parent" @activeClass="text-green-700">[Parent]</LinkTo>
+    <LinkTo @route="addons" @activeClass="text-green-700">[Addons]</LinkTo>
+  {{/if}}
+</nav>

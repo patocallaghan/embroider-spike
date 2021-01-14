@@ -1,12 +1,24 @@
 import EmberRouter from "@embroider/router";
 import config from "./config/environment";
 
-export default class Router extends EmberRouter {
+const USE_CUSTOM_ROUTE_MAP = Boolean(window.USE_CUSTOM_ROUTE_MAP);
+
+export default class CustomRouter extends EmberRouter {
   location = config.locationType;
   rootURL = config.rootURL;
+
+  static map() {
+    if (USE_CUSTOM_ROUTE_MAP) {
+      super.map(function() {
+        this.route('custom');
+      });
+    } else {
+      super.map(...arguments);
+    }
+  }
 }
 
-Router.map(function () {
+CustomRouter.map(function () {
   this.route("players");
   this.route("teams");
   this.route("table");

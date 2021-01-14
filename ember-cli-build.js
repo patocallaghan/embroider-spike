@@ -59,6 +59,7 @@ module.exports = function (defaults) {
       "parent",
       "parent.child",
       "parent.child.grandchild",
+      "custom"
     ],
   });
 };
