@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 
-const EmberApp = require("ember-cli/lib/broccoli/ember-app");
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
-const path = require("path");
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const path = require('path');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
@@ -22,8 +22,8 @@ module.exports = function (defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  const { Webpack } = require("@embroider/webpack");
-  return require("@embroider/compat").compatBuild(app, Webpack, {
+  const { Webpack } = require('@embroider/webpack');
+  return require('@embroider/compat').compatBuild(app, Webpack, {
     staticAddonTestSupportTrees: true,
     staticAddonTrees: true,
     staticHelpers: true,
@@ -35,7 +35,7 @@ module.exports = function (defaults) {
             analyzerPort: 4452,
             generateStatsFile: true,
             openAnalyzer: false,
-            statsFilename: path.join(process.cwd(), "bundle-stats.json"),
+            statsFilename: path.join(process.cwd(), 'bundle-stats.json'),
           }),
         ],
       },
@@ -46,19 +46,19 @@ module.exports = function (defaults) {
         semverRange: '^4.0.1',
         addonModules: {
           'services/intl.js': {
-            dependsOnModules: ['../adapters/default.js']
-          }
-        }
+            dependsOnModules: ['../adapters/default.js'],
+          },
+        },
       },
     ],
     splitAtRoutes: [
-      "addons",
-      "teams",
-      "players",
-      "table",
-      "parent",
-      "parent.child",
-      "parent.child.grandchild",
+      'addons',
+      'teams',
+      'players',
+      'table',
+      'parent',
+      'parent.child',
+      'parent.child.grandchild',
     ],
   });
 };

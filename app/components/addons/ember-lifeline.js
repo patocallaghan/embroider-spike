@@ -1,6 +1,6 @@
-import Component from "@glimmer/component";
-import { tracked } from "@glimmer/tracking";
-import { runTask, runDisposables } from "ember-lifeline";
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
+import { runTask, runDisposables } from 'ember-lifeline';
 
 export default class AddonsEmberLifelineComponent extends Component {
   @tracked date;
@@ -18,6 +18,7 @@ export default class AddonsEmberLifelineComponent extends Component {
   }
 
   willDestroy() {
+    super.willDestroy(...arguments);
     runDisposables(this);
   }
 }
