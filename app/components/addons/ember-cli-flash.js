@@ -7,6 +7,6 @@ export default class AddonsEmberCliFlashComponent extends Component {
 
   @action
   showFlashMessage() {
-    this.flashMessages.success('You made it!')
+    this.flashMessages.success('You made it!');
   }
 }

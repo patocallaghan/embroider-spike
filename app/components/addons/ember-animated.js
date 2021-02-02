@@ -1,8 +1,8 @@
-import Component from "@glimmer/component";
-import { action } from "@ember/object";
-import { tracked } from "@glimmer/tracking";
-import moveSVG from "ember-animated/motions/move-svg";
-import { parallel } from "ember-animated";
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { tracked } from '@glimmer/tracking';
+import moveSVG from 'ember-animated/motions/move-svg';
+import { parallel } from 'ember-animated';
 
 export default class AddonsEmberAnimatedComponent extends Component {
   @tracked bubbles;
@@ -27,11 +27,12 @@ export default class AddonsEmberAnimatedComponent extends Component {
   }
 
   *moveThem({ keptSprites }) {
+    yield;
     keptSprites.forEach(
       parallel(
-        moveSVG.property("cx"),
-        moveSVG.property("cy"),
-        moveSVG.property("r")
+        moveSVG.property('cx'),
+        moveSVG.property('cy'),
+        moveSVG.property('r')
       )
     );
   }
