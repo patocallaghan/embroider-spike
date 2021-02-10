@@ -3,6 +3,7 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const path = require('path');
+const { env } = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
@@ -23,42 +24,46 @@ module.exports = function (defaults) {
   // along with the exports of each module as its value.
 
   const { Webpack } = require('@embroider/webpack');
-  return require('@embroider/compat').compatBuild(app, Webpack, {
-    staticAddonTestSupportTrees: true,
-    staticAddonTrees: true,
-    staticHelpers: true,
-    staticComponents: true,
-    packagerOptions: {
-      webpackConfig: {
-        plugins: [
-          new BundleAnalyzerPlugin({
-            analyzerPort: 4452,
-            generateStatsFile: true,
-            openAnalyzer: false,
-            statsFilename: path.join(process.cwd(), 'bundle-stats.json'),
-          }),
-        ],
-      },
-    },
-    packageRules: [
-      {
-        package: 'ember-intl',
-        semverRange: '^4.0.1',
-        addonModules: {
-          'services/intl.js': {
-            dependsOnModules: ['../adapters/default.js'],
-          },
+  if (process.env.CLASSIC) {
+    return app.toTree();
+  } else {
+    return require('@embroider/compat').compatBuild(app, Webpack, {
+      staticAddonTestSupportTrees: true,
+      staticAddonTrees: true,
+      staticHelpers: true,
+      staticComponents: true,
+      packagerOptions: {
+        webpackConfig: {
+          plugins: [
+            new BundleAnalyzerPlugin({
+              analyzerPort: 4452,
+              generateStatsFile: true,
+              openAnalyzer: false,
+              statsFilename: path.join(process.cwd(), 'bundle-stats.json'),
+            }),
+          ],
         },
       },
-    ],
-    splitAtRoutes: [
-      'addons',
-      'teams',
-      'players',
-      'table',
-      'parent',
-      'parent.child',
-      'parent.child.grandchild',
-    ],
-  });
+      packageRules: [
+        {
+          package: 'ember-intl',
+          semverRange: '^4.0.1',
+          addonModules: {
+            'services/intl.js': {
+              dependsOnModules: ['../adapters/default.js'],
+            },
+          },
+        },
+      ],
+      splitAtRoutes: [
+        'addons',
+        'teams',
+        'players',
+        'table',
+        'parent',
+        'parent.child',
+        'parent.child.grandchild',
+      ],
+    });
+  }
 };
